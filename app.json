@@ -8,17 +8,9 @@
         "pages/order/appointmentOrder",
         "pages/pay-result/pay-result",
         "pages/my-order/my-order",
-        "pages/video/video",
         "pages/city/city",
         "pages/result/result",
-        "pages/time/time",
         "pages/order-detail/orderDetail",
-        "pages/exhibitionBox/exhibitionList/exhibitionList",
-        "pages/exhibitionBox/artistDetail/artistDetail",
-        "pages/exhibitionBox/detail/detail",
-        "pages/exhibitionBox/themeDetail/themeDetail",
-        "pages/bookBox/bookList/bookList",
-        "pages/bookBox/bookSelect/bookSelect",
         "pages/map/map"
     ],
     "window": {

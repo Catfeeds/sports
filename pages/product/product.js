@@ -14,6 +14,7 @@ Page({
 	data: {
 		isFly: true,
 		currentTabsIndex: 0,
+    lessonIndex:0,
 		content: null
 	},
 	onLoad: function (options) {
@@ -64,6 +65,13 @@ Page({
 			currentTabsIndex: index
 		});
 	},
+  //切换日期面板
+  onLessonItemTap: function (event) {
+    var index = product.getDataSet(event, 'index');
+    this.setData({
+      lessonIndex: index
+    });
+  },
 	//点击查看地图
 	onAddressTap: function (event) {
 		wx.openLocation({

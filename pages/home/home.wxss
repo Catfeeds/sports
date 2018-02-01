@@ -2,9 +2,33 @@
 @import "../tpls/products/HomeProducts/HomeProducts-tpl.wxss";
 
 .container {
-  border-top: solid 1px #e6e6e6;
   background-color: #fff;
   position: relative;
+}
+
+.search {
+  margin: 0 20rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /*垂直居中*/
+  font-size: 0;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+
+.search-img {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 20rpx;
+}
+
+.search-input {
+  flex: 1;
+  height: 80rpx;
+  font-size: 14px;
+  line-height: 80rpx;
+  	color: #a6a6a6;
 }
 
 .club {
