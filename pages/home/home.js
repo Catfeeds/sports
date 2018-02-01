@@ -151,11 +151,12 @@ Page({
   onShow: function () {
     console.log(Config.cityCode)
     //地理定位
-    if (Config.cityCode == 0 || Config.cityCode == undefined || Config.cityCode == null) {
+    // if (Config.cityCode == 0 || Config.cityCode == undefined || Config.cityCode == null) {
       var that = this;
       wx.getLocation({
         type: 'gcj02', //返回可以用于wx.openLocation的经纬度
         success: function (res) {
+          console.log(res)
           var latitude = res.latitude
           var longitude = res.longitude
           that.setData({
@@ -169,6 +170,7 @@ Page({
               key: 'UE6BZ-4OMK3-LZ23V-3EW4Z-5J6E3-PCFMJ'
             },
             success: function (res) {
+              console.log(res);
               var cityName = res.data.result.ad_info.city;
               var adcode = res.data.result.ad_info.adcode;
               Config.cityName = cityName;
@@ -197,12 +199,12 @@ Page({
           })
         }
       })
-    } else {
-      this.setData({
-        cityName: Config.cityName,
-        adcode: Config.cityCode
-      })
-    }
+    // } else {
+    //   this.setData({
+    //     cityName: Config.cityName,
+    //     adcode: Config.cityCode
+    //   })
+    // }
     //获取数据
     this._loadData();
   },
