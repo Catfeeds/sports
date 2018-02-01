@@ -1,0 +1,89 @@
+<!--订单详情-->
+<view class="container order-container">
+    <!--地址-->
+    <view class="order-address-info" bindtap="editAddress">
+        <block wx:if="{{addressInfo}}">
+            <view class="contact-box">
+                <image class="icon" src="/images/icon/ico_zuobiao.png"></image>
+                <view class="box">
+                    <text class="box-name">{{addressInfo.name}}</text>
+                    <text class="box-tel">{{addressInfo.mobile}}</text>
+                    <view class="box-detail">{{addressInfo.totalDetail}}</view>
+                </view>
+                <image class="right-icon" src="/images/icon/btn_jinru.png"></image>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="add-new-address">
+                <image class="icon" src="/images/icon/ico_zuobiao.png"></image>
+                <text class="add-tip">添加收货地址</text>
+                <image class="right-icon" src="/images/icon/btn_jinru.png"></image>
+            </view>
+        </block>
+    </view>
+
+    <!--商品展示-->
+    <view class="product-item">
+        <image class="item-left" src="{{productDetailInfo.main_img_url}}" mode="aspectFill"></image>
+        <view class="item-middle">
+            <view class="item-title">{{productDetailInfo.name}} {{productDetailInfo.describe}}</view>
+            <view class="item-price">￥{{productDetailInfo.price}}</view>
+        </view>
+    </view>
+
+    <!-- 属性选择 -->
+    <view class="attribute">
+        <view class="attribute-wrapper">
+
+            <view class="attribute-item">
+                <picker class="{{orderStatus!=0?'disabled':''}}"
+                    range="{{countsArray}}" bindchange="bindPickerCount">
+                    <view class="picker-view">
+                        <view class="pick-left">数量选择</view>
+                        <view class="pick-middle">{{countValue?countValue:'请选择数量'}}</view>
+                        <image class="pick-right" src="/images/icon/btn_jinru.png"></image>
+                    </view>
+                </picker>
+            </view>
+
+            <view class="attribute-item" wx:if="{{featureArray.length>0}}">
+                <picker class="{{orderStatus!=0?'disabled':''}}"
+                range="{{featureArray}}" bindchange="bindPickerFeature">
+                    <view class="picker-view">
+                        <text class="pick-left">规格选择</text>
+                        <text class="pick-middle">{{featureValue?featureValue:'请选择规格'}}</text>
+                        <image class="pick-right" src="/images/icon/btn_jinru.png"></image>
+                    </view>
+                </picker>
+            </view>
+
+        </view>
+    </view>
+    <!-- 配送方式 -->
+    <view class="attribute" style="padding-bottom:100rpx">
+        <view class="attribute-wrapper">
+            <view class="attribute-item">
+                <picker class="{{orderStatus!=0?'disabled':''}}"
+                range="{{shipArray}}" bindchange="bindPickerShip">
+                    <view class="picker-view">
+                        <view class="pick-left">配送方式</view>
+                        <view class="pick-middle">{{shipValue?shipValue:'请选择配送方式'}}</view>
+                        <image class="pick-right" src="/images/icon/btn_jinru.png"></image>
+                    </view>
+                </picker>
+            </view>
+            <view class="attribute-item" hidden="{{isShip}}" style="border-bottom: solid 1px #f0f0f0;">
+                <view class="picker-view">
+                    <view class="pick-left">运费 </view>
+                    <view class="pick-middle">{{ship}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--结算-->
+    <view class="footer-account-box order-accounts">
+        <view class="total-account">￥{{sumMoney}}</view>
+        <view class="pay {{!isCanPay?'disabled':''}}" ontap="pay">{{!isCanPay?'无法购买':'立即支付'}}</view>
+    </view>
+</view>

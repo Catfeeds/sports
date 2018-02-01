@@ -1,0 +1,113 @@
+/**app.wxss**/
+
+@import "wxParse/wxParse.wxss";
+
+
+.container {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", 微锟斤拷锟脚猴拷, STHeiti, 锟斤拷锟斤拷细锟斤拷, sans-serif;
+}
+
+.empty{
+	display: block;
+	margin-top: 140rpx;
+	margin-left: 234rpx;
+	width: 338rpx;
+	height: 302rpx;
+}
+.empty-wrapper{
+	width: 100%;
+	background: #fff;
+}
+
+/* 详情富文本样式 */
+.product-detail-box {
+    padding-top: 20rpx;
+    background-color: white;
+    height: auto;
+}
+
+.product-detail-imgs {
+    margin: 0 40rpx;
+    padding-bottom: 40rpx;
+}
+
+.product-detail-imgs image {
+    width: 100%;
+    display: block;
+    background-color: white;
+    padding: 20rpx 0;
+}
+
+.product-detail-properties {
+    padding-bottom: 150rpx;
+}
+
+.properties-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    padding: 0 40rpx;
+    margin: 0 5px;
+}
+
+.properties-name {
+    color: #999;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+    text-decoration: none;
+    border: none;
+}
+
+.properties-detail {
+    color: #999;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.tabs-bottom {
+    margin-top: 30rpx;
+    background-color: white;
+    padding-top: 40rpx;
+}
+
+.tabs-bottom text {
+    font-size: 40rpx;
+    color: #333;
+    margin-left: 40rpx;
+}
+
+.tabs-more {
+    padding-bottom: 100rpx;
+}
+
+.detail-text {
+    font-size: 14px;
+    color: #666;
+    padding: 10rpx 0 20rpx;
+}
+
+.detail-title {
+    font-size: 15px;
+    color: #333;
+    padding: 20rpx 0;
+    font-weight: 500;
+}
+
+.product-detail-imgs {
+    margin: 0 40rpx;
+    padding-bottom: 40rpx;
+}
+
+.product-detail-imgs view {
+    color: #999 !important;
+    font-size: 14px !important;
+    background: #fff !important;
+    line-height: 30px !important;
+}

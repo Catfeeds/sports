@@ -1,0 +1,88 @@
+@import "../tpls/menus/menus-tpl.wxss";
+@import "../tpls/products/HomeProducts/HomeProducts-tpl.wxss";
+
+.container {
+  border-top: solid 1px #e6e6e6;
+  background-color: #fff;
+  position: relative;
+}
+
+.club {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.club-item {
+  width: 100%;
+  height: 360rpx;
+  position: relative;
+}
+
+.item-bg {
+  width: 100%;
+  height: 360rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.item-heart {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 48rpx;
+  height: 44rpx;
+}
+
+.item-content {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100rpx;
+  position: absolute;
+  left: 0;
+  bottom: 30rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /*垂直居中*/
+  font-size: 0;
+}
+
+.item-logo {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.item-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.item-title {
+  font-size: 14px;
+}
+
+.item-desc {
+  margin-top: 10rpx;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item-address {
+  font-size: 11px;
+  color: red;
+}
+
+.item-distance {
+  width: 100rpx;
+  color: red;
+  font-size: 11px;
+  text-align: right;
+}

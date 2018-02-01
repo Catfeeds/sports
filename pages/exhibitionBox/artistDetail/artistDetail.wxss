@@ -1,0 +1,98 @@
+/* pages/exhibitionBox/artistDetail/artistDetail.wxss */
+
+.container {
+    background: #fff;
+}
+
+.header {
+    width: 100%;
+}
+
+.cover-img {
+    width: 750rpx;
+    height: 400rpx;
+    display: block;
+}
+
+.introduce {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40rpx;
+}
+
+.introduce-img {
+    width: 160rpx;
+    height: 160rpx;
+    display: block;
+    margin: -80rpx auto 0;
+    border-radius: 100%;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.introduce-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-top: 30rpx;
+}
+
+.introduce-nums {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    margin-top: 10rpx;
+}
+
+.introduce-content {
+    margin-top: 10rpx;
+    padding: 0 40rpx;
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+}
+
+.works {
+    background: #efefef;
+    padding-top: 30rpx;
+}
+
+.works-title {
+    background: #fff;
+    padding: 40rpx 40rpx 0 40rpx;
+}
+
+.works-wrapper {
+    padding: 0 40rpx 40rpx 40rpx;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: space-between
+}
+
+.work {
+    width: 320rpx;
+    display: flex;
+    flex-direction: column;
+	margin-top: 40rpx;
+}
+
+.work-img {
+    display: block;
+    width: 320rpx;
+    height: 320rpx;
+}
+
+.work-name{
+	font-size: 14px;
+	font-weight: 500;
+	color: #333333;
+	margin-top: 20rpx;
+}
+.work-price{
+	margin-top: 10rpx;
+	font-size: 13px;
+	color: #d93838;
+}

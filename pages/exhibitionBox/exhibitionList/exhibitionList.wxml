@@ -1,0 +1,28 @@
+<!--pages/exhibitionBox/exhibitionList/exhibitionList.wxml-->
+<import src="../../tpls/products/ThemeProducts/ThemeProducts-tpl.wxml" />
+<import src="../../tpls/list/themeList/themeList.wxml" />
+<import src="../../tpls/list/artistList/artistList.wxml" />
+
+<view class="services_container">
+    <view class="services_banner">
+        <image class="services_banner" src="{{themeInfo.shop_img.url}}" mode="aspectFill"></image>
+    </view>
+    <view class="service-body" hidden="{{categoryProducts.error_code==30000}}">
+        <view class="tabs-box">
+              <block wx:for="{{['艺术家','作品' ,'专题']}}">
+				<view class='tabs-item-wrapper' bindtap="onTabsItemTap" data-index="{{index}}">
+					<text class="tabs-item {{currentTabsIndex==index?'selected':''}}">{{item}}</text>
+				</view>
+            </block>  
+        </view>
+        <view wx:if="{{currentTabsIndex==0}}">
+            <template is="artistList" data="{{products:artistList.data}}"></template>
+        </view>
+        <view wx:if="{{currentTabsIndex==1}}">
+            <template is="ThemeProducts" data="{{products:categoryProducts}}"></template>
+        </view>
+        <view wx:if="{{currentTabsIndex==2}}">
+            <template is="themeList" data="{{products:themeList}}"></template>
+        </view>
+    </view>
+</view>

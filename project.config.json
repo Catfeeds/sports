@@ -1,0 +1,62 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.5.4",
+	"appid": "wx40045c8ad6fc6e9c",
+	"projectname": "sports",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "appointmentOrder",
+					"pathName": "pages/order/appointmentOrder",
+					"query": "id=8&name=exhibition box"
+				},
+				{
+					"id": 1,
+					"name": "展览列表",
+					"pathName": "pages/exhibitionBox/exhibitionList/exhibitionList",
+					"query": "id=8&name=exhibition box"
+				},
+				{
+					"id": -1,
+					"name": "展览列表",
+					"pathName": "pages/exhibitionBox/themeDetail/themeDetail",
+					"query": "id=5"
+				},
+				{
+					"id": -1,
+					"name": "筛选",
+					"pathName": "pages/bookBox/bookSelect/bookSelect",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "123",
+					"pathName": "pages/order-detail/orderDetail",
+					"query": "id=48"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,44 @@
+/* pages/tpls/list/artistList/artistList.wxss */
+
+.themeList {
+    background: #fff;
+}
+
+.theme {
+    padding: 40rpx 0rpx;
+    margin: 0 40rpx;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-top: solid #f0f0f0 1px;
+}
+
+.theme:first-of-type {
+    border-top: none;
+}
+
+.theme_img {
+    width: 670rpx;
+    height: 300rpx;
+    overflow: hidden;
+    display: block;
+}
+
+.theme_name {
+    margin-top: 32rpx;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.theme_num {
+	margin-top: 12rpx;
+    font-size: 13px;
+	line-height: 13px;
+    color: #d93838;
+}

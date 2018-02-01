@@ -1,0 +1,35 @@
+<!--pages/bookBox/bookSelect/bookSelect.wxml-->
+<view class='container'>
+    <view class='wrapper'>
+        <!-- <view class='title'>分类</view>
+        <view class='content'>
+            <view class='box {{categoryItems[0]?"current":""}}' data-index='0' bindtap='categoryItemTap'>商品</view>
+            <view class='box {{categoryItems[1]?"current":""}}' data-index='1' bindtap='categoryItemTap'>专题</view>
+			<view class='box {{categoryItems[2]?"current":""}}' data-index='2' bindtap='categoryItemTap'>全部</view>
+        </view> -->
+        <!-- <view class='title'>商品</view>
+        <view class='content'>
+            <view class='box {{productItems[0]?"current":""}}' data-index='0' bindtap='productItemTap'>6-7岁</view>
+            <view class='box {{productItems[1]?"current":""}}' data-index='1' bindtap='productItemTap'>世界少儿读物</view>
+            <view class='box {{productItems[2]?"current":""}}' data-index='2' bindtap='productItemTap'>少年宫系列</view>
+			<view class='box {{productItems[3]?"current":""}}' data-index='3' bindtap='productItemTap'>美国经典少儿读物</view>
+            <view class='box {{productItems[4]?"current":""}}' data-index='4' bindtap='productItemTap'>小小博物馆</view>
+            <view class='box {{productItems[5]?"current":""}}' data-index='5' bindtap='productItemTap'>希腊神话精选</view>
+            <view class='box {{productItems[6]?"current":""}}' data-index='6' bindtap='productItemTap'>印象派浅析</view>
+        </view> -->
+		<view class='title'>专题</view>
+        <view class='content'>
+            <view class='box {{themeItems[0]?"current":""}}' data-index='0' data-id='13' bindtap='themeItemTap'>活动报名</view>
+            <view class='box {{themeItems[1]?"current":""}}' data-index='1' data-id='14' bindtap='themeItemTap'>专题销售</view>
+            <view class='box {{themeItems[2]?"current":""}}' data-index='2' data-id='15' bindtap='themeItemTap'>营销活动</view>
+        </view>
+    </view>
+
+	<!-- <view class='bottom'>
+		<view class='del' bindtap='del'>取消</view>
+		<view class='sure' bindtap='sure'>确定</view>
+	</view> -->
+
+
+
+</view>

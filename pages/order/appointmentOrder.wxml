@@ -1,0 +1,134 @@
+<!--订单详情-->
+<view class="container order-container">
+
+    <!--商品展示-->
+	<view class="choose" wx:if="{{goto}}">
+		<view class="product-item">
+			<image class="item-left" src="{{productDetailInfo.main_img_url}}" mode="aspectFill"></image>
+			<view class="item-middle">
+				<view class="item-title">{{productDetailInfo.course_name}} {{productDetailInfo.discribe}}</view>
+				<!-- <view class="item-price">￥{{productDetailInfo.price}}</view> -->
+			</view>
+    	</view>
+
+		<!-- 属性选择 -->
+		<view class="attribute">
+			<view class="attribute-wrapper">
+				<view class="attribute-item">
+					<picker class="{{orderStatus!=0?'disabled':''}}" range="{{dataArr}}" bindchange="bindPickerData" data-type="{{dataArr[data]}}">
+						<view class="picker-view">
+							<view class="pick-left">日期</view>
+							<view class="pick-middle">{{dataValue?dataValue:'请选择日期'}}</view>
+							<image class="pick-right" src="/images/icon/btn_jinru.png"></image>
+						</view>
+					</picker>
+				</view>
+
+				<view class="attribute-item">
+					<picker class="{{orderStatus!=0?'disabled':''}}" range="{{timeArr}}" bindchange="bindPickerTime" data-type="time">
+						<view class="picker-view">
+							<text class="pick-left">时间</text>
+							<text class="pick-middle">{{timeValue?timeValue:'请选择时间'}}</text>
+							<image class="pick-right" src="/images/icon/btn_jinru.png"></image>
+						</view>
+					</picker>
+				</view>
+
+				<view class="attribute-item">
+					<picker class="{{orderStatus!=0?'disabled':''}}" range="{{countArr}}" bindchange="bindPickerCount" data-type="count">
+						<view class="picker-view">
+							<text class="pick-left">人数</text>
+							<text class="pick-middle">{{countValue?countValue:'请选择人数'}}</text>
+							<image class="pick-right" src="/images/icon/btn_jinru.png"></image>
+						</view>
+					</picker>
+				</view>
+
+				<view class="attribute-item">
+					<view class="picker-view">
+						<text class="pick-left">老师</text>
+						<text class="pick-middle">{{teacher}}</text>
+					</view>
+				</view>
+
+			</view>
+		</view>
+	
+	</view>
+
+    <!--预约 -->
+	<view class="lock" wx:if="{{!goto}}">
+		<!-- 倒计时 -->
+		<view class='countDown'>
+			<view class='countDown_content'>
+			预约订单已成功锁定，请在<text class='countDown_content_important'>{{clock}}</text>内完成支付，否则系统将自动取消本次交易，退出本页面也将视为放弃
+			</view>
+		</view>
+		<view class="attribute">
+			<view class="attribute-wrapper">
+				<view class="attribute-item">
+					<view class="picker-view">
+						<text class="pick-left">日期</text>
+						<text class="pick-middle">{{dataValue}}</text>
+					</view>
+				</view>
+				<view class="attribute-item">
+					<view class="picker-view">
+						<text class="pick-left">时间</text>
+						<text class="pick-middle">{{timeValue}}</text>
+					</view>
+				</view>
+				<view class="attribute-item">
+					<view class="picker-view">
+						<text class="pick-left">人数</text>
+						<text class="pick-middle">{{countValue}}</text>
+					</view>
+				</view>
+				<view class="attribute-item">
+					<view class="picker-view">
+						<text class="pick-left">老师</text>
+						<text class="pick-middle">{{teacher}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="attribute" style="padding-bottom:100rpx">
+			<view class="attribute-wrapper">
+
+				<view class="attribute-item">
+					<view class="picker-view">
+						<view class="pick-left">姓名</view>
+						<view class="pick-middle">
+							<input value='{{name}}' placeholder='请输入姓名'
+							type="text" confirm-type="done" placeholder-style="color:#999" bindinput ="userNameInput"/>
+						</view>
+					</view>
+				</view>
+				<view class="attribute-item" style="border-bottom: solid 1px #f0f0f0;">
+					<view class="picker-view">
+						<view class="pick-left">联系方式 </view>
+						<view class="pick-middle">
+							<input value='{{mobile}}' placeholder='请输入手机号码'
+							type="number" confirm-type="done" placeholder-style="color:#999" bindinput ="userTelInput"/>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+
+    <!--立即预约-->
+    <view class="footer-account-box order-accounts" wx:if="{{goto}}">
+        <view class="total-account">￥{{sumMoney}}</view>
+        <view class="pay {{!isCanPay?'disabled':''}}" ontap="onSure">{{!isCanPay?'无法预约':'立即预约'}}</view>
+    </view>
+
+	<!--结算-->
+    <view class="footer-account-box order-accounts" wx:if="{{!goto}}">
+        <view class="total-account">￥{{sumMoney}}</view>
+        <view class="pay {{!isCanPay?'disabled':''}}" ontap="pay">{{!isCanPay?'无法预约':'立即支付'}}</view>
+    </view>
+</view>

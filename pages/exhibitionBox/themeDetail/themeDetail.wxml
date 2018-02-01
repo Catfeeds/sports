@@ -1,0 +1,86 @@
+<import src="../../../wxParse/wxParse.wxml" />
+
+<view class='container'>
+    <view class='header'>
+        <image class='header-img' src='{{themeDetail.main_img_url}}' mode='aspectFill'></image>
+        <view class='header-title'>
+            <view class='header-name'>{{themeDetail.name}}</view>
+            <view class='header-desc'>{{themeDetail.describe}}</view>
+        </view>
+        <view class='header-add' bindtap='openMap' wx:if="{{themeDetail.price!=0}}">
+            <view class='header-time'>活动时间：{{themeDetail.duration}}</view>
+            <view class="shop_date">
+                <text>预约地点：北京市朝阳区百子湾路32号二十二院艺术区二十七号馆</text>
+                <image class="right-icon" src="/images/icon/ico_arrow_right.jpg"></image>
+            </view>
+        </view>
+    </view>
+    <view class='content'>
+        <view class="product-detail-box">
+            <view class='product-detail-imgs'>
+                <view class="wxParse">
+                    <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+                </view>
+            </view>
+
+        </view>
+    </view>
+
+    <!-- 弹出层 -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+		<view class='commodity_attr_box_title'>预约信息</view>
+		
+		<view class="attribute" style='margin-top:0'>
+			<view class="attribute-wrapper">
+
+				<view class="attribute-item">
+					<view class="picker-view">
+						<view class="pick-left">姓名</view>
+						<view class="pick-middle">
+							<input value='{{name}}' placeholder='请输入姓名'
+							type="text" confirm-type="done" placeholder-style="color:#999" bindinput ="userNameInput"/>
+						</view>
+					</view>
+				</view>
+
+				<view class="attribute-item">
+					<view class="picker-view">
+						<view class="pick-left">联系方式 </view>
+						<view class="pick-middle">
+							<input value='{{mobile}}' placeholder='请输入手机号码'
+							type="number" confirm-type="done" placeholder-style="color:#999" bindinput ="userTelInput"/>
+						</view>
+					</view>
+				</view>
+				<view class="attribute-item" style="border-bottom: solid 1px #f0f0f0;">
+					<view class="picker-view">
+						<view class="pick-left">预约人数 </view>
+						<view class="pick-middle">
+							<input value='{{discount}}'
+							type="number" confirm-type="done" placeholder-style="color:#999" bindinput ="userNumInput"/>
+						</view>
+					</view>
+				</view>
+				<view class="attribute-item" style="border-bottom: solid 1px #f0f0f0;">
+					<view class="picker-view">
+						<view class="pick-left">总价 </view>
+						<view class="pick-middle" style="font-weight:500;color:#d93838;font-size:20px">
+						{{sumMoney}}
+						</view>
+					</view>
+				</view>
+
+			</view>
+		</view>
+        <view class='sure' bindtap='submitOrder'>立即支付</view>
+    </view>
+
+    <!-- 底部立即购买 -->
+    <view class="cart-box" wx:if="{{themeDetail.price!=0}}">
+        <view class="product-counts">￥{{themeDetail.price}}</view>
+        <view class="add-cart-btn {{themeDetail.stock==0?'disabled':''}}" bindtap="canBuy">
+            <text>{{themeDetail.stock==0?'商品已下架':'立即购买'}}</text>
+        </view>
+    </view>
+</view>

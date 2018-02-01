@@ -1,0 +1,69 @@
+<import src="../tpls/menus/menus-tpl.wxml" />
+<import src="../tpls/products/HomeProducts/HomeProducts-tpl.wxml" />
+
+<view class="container">
+  <view class='search'>
+  </view>
+  <map id="map1" longitude="{{longitude}}" latitude="{{latitude}}" scale="10" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" bindtap="bindtap" show-location
+    style="width: 100%; height: 360rpx;"></map>
+
+  <view class='club'>
+    <view class='club-item'>
+      <image class='item-bg' src='/images/icon/pic1.png' mode="aspectFill"></image>
+      <image class='item-heart' src='/images/icon/btn_sel_collect.png' mode="aspectFill"></image>
+      <view class='item-content'>
+        <image class='item-logo' src='/images/icon/head.png'></image>
+        <view class='item-text'>
+          <view class='item-title'>朝外SOHO健身俱乐部</view>
+          <view class='item-desc'>
+            <text class='item-address'>北京市朝阳区朝外大街朝外SOHO A座</text>
+            <text class='item-distance'>1.5KM</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='club-item'>
+      <image class='item-bg' src='/images/icon/pic1.png' mode="aspectFill"></image>
+      <image class='item-heart' src='/images/icon/btn_sel_collect.png' mode="aspectFill"></image>
+      <view class='item-content'>
+        <image class='item-logo' src='/images/icon/head.png'></image>
+        <view class='item-text'>
+          <view class='item-title'>朝外SOHO健身俱乐部</view>
+          <view class='item-desc'>
+            <text class='item-address'>北京市朝阳区朝外大街朝外SOHO A座</text>
+            <text class='item-distance'>1.5KM</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='club-item'>
+      <image class='item-bg' src='/images/icon/pic1.png' mode="aspectFill"></image>
+      <image class='item-heart' src='/images/icon/btn_sel_collect.png' mode="aspectFill"></image>
+      <view class='item-content'>
+        <image class='item-logo' src='/images/icon/head.png'></image>
+        <view class='item-text'>
+          <view class='item-title'>朝外SOHO健身俱乐部</view>
+          <view class='item-desc'>
+            <text class='item-address'>北京市朝阳区朝外大街朝外SOHO A座</text>
+            <text class='item-distance'>1.5KM</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='club-item'>
+      <image class='item-bg' src='/images/icon/pic1.png' mode="aspectFill"></image>
+      <image class='item-heart' src='/images/icon/btn_sel_collect.png' mode="aspectFill"></image>
+      <view class='item-content'>
+        <image class='item-logo' src='/images/icon/head.png'></image>
+        <view class='item-text'>
+          <view class='item-title'>朝外SOHO健身俱乐部</view>
+          <view class='item-desc'>
+            <text class='item-address'>北京市朝阳区朝外大街朝外SOHO A座</text>
+            <text class='item-distance'>1.5KM</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

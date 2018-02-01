@@ -1,0 +1,34 @@
+<import src="../tpls/list/orderList/orderList.wxml" />
+
+<view class="container my-container">
+    <view class="tap">
+        <view bindtap='ontabChange' class='tap-item' data-index="0">
+            <text class='tap-wrap {{currentTabsIndex==0?"active":""}}'>全部</text>
+        </view>
+        <view bindtap='ontabChange' class='tap-item' data-index="1">
+            <text class='tap-wrap {{currentTabsIndex==1?"active":""}}'>待付款</text>
+        </view>
+        <view bindtap='ontabChange' class='tap-item' data-index="2">
+            <text class='tap-wrap {{currentTabsIndex==2?"active":""}}'>待使用</text>
+        </view>
+        <view bindtap='ontabChange' class='tap-item' data-index="3">
+            <text class='tap-wrap {{currentTabsIndex==3?"active":""}}'>已完成</text>
+        </view>
+    </view>
+    <view class="my-order">
+        <view class="item-main">
+             <view wx:if="{{currentTabsIndex==0}}"> 
+                <template is="orderList" data="{{products:orderArr,select:true,Tabindex:0}}"></template>
+             </view> 
+             <view wx:if="{{currentTabsIndex==1}}">
+                <template is="orderList" data="{{products:orderArr,select:false,Tabindex:1}}"></template>
+            </view>
+            <view wx:if="{{currentTabsIndex==2}}">
+                <template is="orderList" data="{{products:orderArr,select:false,Tabindex:2}}"></template>
+            </view>
+            <view wx:if="{{currentTabsIndex==3}}">
+                <template is="orderList" data="{{products:orderArr,select:false,Tabindex:3}}"></template>
+            </view> 
+        </view>
+    </view>
+</view>

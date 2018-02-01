@@ -1,0 +1,67 @@
+/* pages/bookBox/bookSelect/bookSelect.wxss */
+
+.container {
+    border-top: solid 1px #e6e6e6;
+    background: #fff;
+}
+
+.wrapper {
+    padding: 40rpx 40rpx 100rpx 40rpx;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	padding-bottom: 40rpx;
+}
+
+.box {
+    height: 70rpx;
+    padding: 0 40rpx;
+    background-color: #efefef;
+    line-height: 70rpx;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+}
+.current{
+	background-color: #d93838;
+	color: #fff;
+}
+.bottom{
+	height: 100rpx;
+	width:100%;
+	border-top: solid 1px #e6e6e6;
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.del{
+	flex: 1;
+	font-size: 20px;
+	color: #333333;
+	font-weight: 500;
+	line-height: 100rpx;
+	text-align: center;
+}
+.sure{
+	flex: 1;
+	font-size: 20px;
+	font-weight: 500;
+	color: #ffffff;
+	background: #d93838;
+		line-height: 100rpx;
+	text-align: center;
+}

@@ -1,0 +1,24 @@
+<!--pages/exhibitionBox/artistDetail/artistDetail.wxml-->
+<view class='container'>
+	<view class='header'>
+		<image class='cover-img' src='{{artistDetail.cover_img}}' mode="aspectFill"></image>
+	</view>
+	<view class='introduce'>
+		<image class='introduce-img' src='{{artistDetail.img}}'></image>
+		<view class='introduce-name'>{{artistDetail.artist_name}}</view>
+		<view class='introduce-nums'>{{artistDetail.num}} 作品</view>
+		<view class='introduce-content'>{{artistDetail.introduce}}</view>
+	</view>
+	<view class='works'>
+		<view class='works-title'>TA的作品</view>
+		<view class='works-wrapper'>
+			<block wx:for="{{artistDetail.works}}">
+				<view class='work' data-type="{{id}}" data-id='{{item.id}}' bindtap='artistDetailTap'>
+					<image class='work-img' src='{{item.main_img_url}}' mode='aspectFill'></image>
+					<view class='work-name'>{{item.name}}</view>
+					<view class='work-price'>{{item.price}} 元/幅</view>
+				</view>
+			</block>
+		</view>
+	</view>
+</view>

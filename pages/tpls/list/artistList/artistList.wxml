@@ -1,0 +1,25 @@
+<!--pages/tpls/list/artistList/artistList.wxml-->
+<template name="artistList">
+
+    <view class="artistList">
+        <block wx:if="{{products.length>0}}">
+            <block wx:for="{{products}}">
+                <view class="artist" data-id="{{item.id}}" bindtap="artistListTap">
+                    <image class="artist_img" src="{{item.img}}" mode="aspectFill"></image>
+                    <view class="artist_data">
+                        <text class="artist_name">{{item.artist_name}} <text style='font-weight:500' wx:if="{{item.discribe}}">{{item.discribe}}</text></text>
+                        <text class="artist_num">{{item.works}} 作品</text>
+                    </view>
+					<image class='right-icon' src='../../../images/icon/big-right-icon.png'></image>
+                </view>
+            </block>
+        </block>
+
+        <block wx:else>
+            <view class='empty-wrapper'>
+                <image class='empty' src='/images/icon/empty.jpg' mode="aspectFill"></image>
+            </view>
+        </block>
+    </view>
+	
+</template>

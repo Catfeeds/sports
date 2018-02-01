@@ -1,0 +1,79 @@
+/* pages/tpls/list/artistList/artistList.wxss */
+
+.artistList {
+    background: #fff;
+}
+
+.artist {
+    padding: 40rpx 0rpx;
+    margin: 0 40rpx;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-bottom: solid #f0f0f0 1px;
+    align-items: center; /*垂直居中*/
+    justify-content: center; /*水平居中*/
+}
+
+.artist_img {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.artist_img image {
+    display: block;
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.artist_data {
+    flex: 1;
+    margin-left: 40rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*水平居中*/
+    font-size: 0;
+}
+
+.artist_name {
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    color: #333;
+}
+
+.artist_num {
+    margin-top: 10rpx;
+    font-size: 13px;
+    color: #999;
+}
+
+.right-icon {
+    display: block;
+    width: 44rpx;
+    height: 44rpx;
+    vertical-align: middle;
+}
+
+.appointments_describe {
+    display: block;
+    margin-top: 10rpx;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.appointments_describe text {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 15px;
+    color: #999;
+    border: solid #e6e6e6 1px;
+    margin-right: 10rpx;
+    border-radius: 9px;
+    letter-spacing: 5rpx;
+    text-align: center;
+    padding: 4rpx 8rpx;
+}
