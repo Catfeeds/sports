@@ -11,7 +11,8 @@
         "pages/city/city",
         "pages/result/result",
         "pages/order-detail/orderDetail",
-        "pages/map/map"
+        "pages/map/map",
+        "pages/kill/kill"
     ],
     "window": {
         "navigationBarBackgroundColor": "#ffffff",
@@ -32,13 +33,19 @@
                 "selectedIconPath": "images/home/btn_sel_home.png"
             },
             {
+                "pagePath": "pages/kill/kill",
+                "text": "秒杀",
+                "iconPath": "images/home/btn_nor_seckill.png",
+                "selectedIconPath": "images/home/btn_sel_secKill.png"
+            },
+            {
                 "pagePath": "pages/my/my",
                 "text": "我的",
                 "iconPath": "images/home/btn_nor_mine.png",
                 "selectedIconPath": "images/home/btn_sel_mine.png"
             }
         ],
-        "selectedColor": "#333",
-        "color": "#989898"
+        "selectedColor": "#00b4d0",
+        "color": "#BEBEBE"
     }
 }

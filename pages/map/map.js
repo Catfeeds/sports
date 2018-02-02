@@ -17,6 +17,30 @@ Page({
     },
     longitude: 0,
     latitude: 0,
+	controls:[
+		{
+			id:0,
+			iconPath:'http://cs.cms.joyfamliy.com:2017/Data/UploadFiles/literature/product-class@1.jpg',
+			position: {
+				left: 0,
+				top: 300 - 50,
+				width: 50,
+				height: 50
+			},
+			clickable: true
+		},
+		{
+			id: 0,
+			iconPath: '/images/icon/empty.jpg',
+			position: {
+				left: 0,
+				top: 300,
+				width: 50,
+				height: 50
+			},
+			clickable: true
+		},
+	],
     markers: [
       {
         iconPath: "/images/icon/marks.png",

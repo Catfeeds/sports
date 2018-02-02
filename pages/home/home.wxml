@@ -3,7 +3,7 @@
 
 <view class="container">
   <view class='search'>
-    <image class='search-img' src='/images/icon/ico_time.png'></image>
+    <image class='search-img' src='/images/icon/ico_search.png'></image>
     <input class='search-input' placeholder='搜索你想去的健身俱乐部'></input>
   </view>
   <map id="map1" longitude="{{longitude}}" latitude="{{latitude}}" scale="10" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" bindtap="bindtap" show-location
