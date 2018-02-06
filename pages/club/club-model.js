@@ -1,7 +1,7 @@
 
 import { Base } from '../../utils/base.js';
 
-class Product extends Base {
+class Club extends Base {
     constructor() {
         super();
     }
@@ -30,4 +30,4 @@ class Product extends Base {
    
 };
 
-export { Product }
+export { Club }

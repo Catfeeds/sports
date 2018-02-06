@@ -237,7 +237,7 @@ Page({
     //判断是传统商品还是预约商品
     var id = home.getDataSet(event, 'id');
     wx.navigateTo({
-      url: '../product/product?id=' + id,
+		url: '../club/club?id=' + id,
     })
   },
   //分享效果

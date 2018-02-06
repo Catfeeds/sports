@@ -12,7 +12,8 @@
         "pages/result/result",
         "pages/order-detail/orderDetail",
         "pages/map/map",
-        "pages/kill/kill"
+        "pages/kill/kill",
+        "pages/club/club"
     ],
     "window": {
         "navigationBarBackgroundColor": "#ffffff",
