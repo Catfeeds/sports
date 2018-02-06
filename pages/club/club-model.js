@@ -2,32 +2,31 @@
 import { Base } from '../../utils/base.js';
 
 class Club extends Base {
-    constructor() {
-        super();
-    }
-	//获取传统商品详情
-    getProductInfo(id, callback) {
-        var param = {
-            url: 'product/' + id,
-            sCallback: function (data) {
-                callback && callback(data);
-            }
-        };
-        this.request(param);
-    }
+  constructor() {
+    super();
+  }
+  //获取场馆详情
+  getClubInfo(id, callback) {
+    var param = {
+      url: 'venue/' + id,
+      sCallback: function (res) {
+        callback && callback(res);
+      }
+    };
+    this.request(param);
+  }
 
-    //获取传统商品当前分类下推荐商品（商品前5个）
-	getMoreByCategory(id,summary, callback) {
-		console.log(id, summary)
-		var param = {
-			url: 'product/by_category?id=' + id + '&summary=' + summary,
-			sCallback: function (data) {
-				callback && callback(data);
-			}
-		};
-		this.request(param);
-	}
-   
+  //获取七天内课程列表
+  getLessonInfo(id, callback) {
+    var param = {
+      url: 'course/courseTimeList?id=' + id,
+      sCallback: function (res) {
+        callback && callback(res);
+      }
+    };
+    this.request(param);
+  }
+
 };
 
 export { Club }

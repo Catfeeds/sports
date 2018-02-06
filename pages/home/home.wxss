@@ -50,6 +50,14 @@
   top: 0;
   left: 0;
 }
+.item-bg2{
+    width: 100%;
+  height: 360rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2)
+}
 
 .item-heart {
   position: absolute;
@@ -101,12 +109,12 @@
 
 .item-address {
   font-size: 11px;
-  color: red;
+  /* color: red; */
 }
 
 .item-distance {
   width: 100rpx;
-  color: red;
+  /* color: red; */
   font-size: 11px;
   text-align: right;
 }

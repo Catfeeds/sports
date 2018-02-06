@@ -1,3 +1,5 @@
 <!--pages/map/map.wxml-->
-<map class='map' longitude="{{longitude}}" latitude="{{latitude}}" scale="10" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" bindtap="bindtap" show-location
-></map>
+<map class='map' longitude="{{longitude}}" latitude="{{latitude}}" scale="10" 
+controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" 
+bindmarkertap="markertap" 
+bindtap="bindtap" show-location></map>

@@ -7,48 +7,15 @@ class Home extends Base {
     super();
   }
 
-  getBannerData(id, callback) {
+  //根据经纬度获取场馆列表
+  getClubList(longitude, latitude, callback) {
     var params = {
-      url: 'banner/' + id,
+      url: 'venue/venueList?longitude=' + longitude + '&latitude=' + latitude,
       sCallback: function (res) {
-        callback && callback(res.items);
+        callback && callback(res);
       }
     }
     this.request(params);
-
   }
-
-  getThemeData(callback) {
-    var param = {
-      url: 'theme?ids=1,2,3',
-      sCallback: function (data) {
-        callback && callback(data);
-      }
-    }
-    this.request(param);
-
-  }
-
-  getProductsData(callback) {
-    var param = {
-      url: 'product/recent',
-      sCallback: function (data) {
-        callback && callback(data);
-      }
-    }
-    this.request(param);
-
-  }
-
-  /*获得某种分类的商品*/
-//   getProductsByCategory(id, callback) {
-//     var param = {
-//       url: 'product/by_category?id=' + id,
-//       sCallback: function (data) {
-//         callback && callback(data);
-//       }
-//     };
-//     this.request(param);
-//   }
 }
 export { Home };

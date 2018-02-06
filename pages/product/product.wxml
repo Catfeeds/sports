@@ -1,2 +1,29 @@
-<!--pages/product/product.wxml-->
-<text>pages/product/product.wxml</text>
+<view class="container">
+  <swiper indicator-dots="{{true}}">
+    <!-- <block wx:for="{{imgUrls}}"> -->
+    <swiper-item>
+      <image src="/images/icon/pic3.png" class="slide-image" />
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/icon/pic3.png" class="slide-image" />
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/icon/pic3.png" class="slide-image" />
+    </swiper-item>
+    <!-- </block> -->
+  </swiper>
+  <view class='view-info'>
+    <view class='product-name'>BODYPUMP塑形杠铃操</view>
+    <view class='product-club'>朝外SOHO健身俱乐部</view>
+    <view class='price'>
+      <text class='price1'>￥100</text>
+      <text class='price2'>￥250</text>
+    </view>
+  </view>
+
+  <view class='view-info'>
+    <view class=''></view>
+  
+  </view>
+
+</view>

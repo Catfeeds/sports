@@ -5,7 +5,7 @@ class Config {
 	}
 }
 
-Config.restUrl = 'https://api.joyfamliy.com/api/v1/';
+Config.restUrl = 'http://api.fitness.dayaartist.com/index.php/api/v2/';
 Config.onPay = true;  //是否启用支付
 
 Config.cityName = '北京市';
